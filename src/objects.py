@@ -1,7 +1,7 @@
 import pygame
 
 from src import settings
-from src.tile import GreenTile1, GreenTile2, GreenTile3
+from src.tile import GreenGrass
 from src.player import Player
 
 
@@ -23,17 +23,8 @@ class Objects:
             for col_idx, col in enumerate(row):
                 x = col_idx*settings.TILE_SIZE
 
-                if col == 'x':
-                    GreenTile1((x, y), (self.visible_sprites, ))
-
-                if col == 'g2':
-                    GreenTile2((x, y), (self.visible_sprites, ))
-
-                if col == 'g3':
-                    GreenTile3((x, y), (self.visible_sprites, ))
-
-                if col == 'p':
-                    Player((x, y), (self.visible_sprites, ))
+                if col == 'grass':
+                    GreenGrass((x, y), (self.visible_sprites, ))
 
     def run(self):
 

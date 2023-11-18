@@ -27,6 +27,7 @@ class Game:
 
             self.screen.fill('black')
             self.objects.run()
+
             pygame.display.update()
             self.clock.tick(60)
 
