@@ -16,6 +16,8 @@ class Game:
 
         self.objects = Objects()
 
+        # print(len(self.objects.visible_sprites))
+
     def run(self):
 
         while True:

@@ -2,9 +2,6 @@ import random
 
 from glob import glob
 import pygame
-from src.settings import *
-
-from random import randint
 
 
 class GreenGrass(pygame.sprite.Sprite):
@@ -15,3 +12,4 @@ class GreenGrass(pygame.sprite.Sprite):
         self.images = glob('graphics/grass/*.png')
         self.image = pygame.image.load(random.choice(self.images)).convert_alpha()
         self.rect = self.image.get_rect(topleft=pos)
+        # print(self.rect.center)
