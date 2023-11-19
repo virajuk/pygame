@@ -3,6 +3,7 @@ import pygame
 from src import settings
 from src.tile import GreenGrass
 from src.player import Player
+from src.trees import Trees
 
 
 class Objects:
@@ -18,13 +19,11 @@ class Objects:
 
     def create_map(self):
 
-        for row_idx, row in enumerate(settings.WORLD_MAP):
+        for row_idx in range(int(settings.HEIGHT/settings.TILE_SIZE)):
             y = row_idx*settings.TILE_SIZE
-            for col_idx, col in enumerate(row):
-                x = col_idx*settings.TILE_SIZE
-
-                if col == 'grass':
-                    GreenGrass((x, y), (self.visible_sprites, ))
+            for col_idx in range(int(settings.WIDTH/settings.TILE_SIZE)):
+                x = col_idx * settings.TILE_SIZE
+                GreenGrass((x, y), (self.visible_sprites,))
 
     def run(self):
 

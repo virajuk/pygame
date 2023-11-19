@@ -25,7 +25,11 @@ class Game:
                     pygame.quit()
                     sys.exit()
 
-            self.screen.fill('black')
+            keys = pygame.key.get_pressed()
+            if keys[pygame.K_ESCAPE]:
+                pygame.quit()
+                sys.exit()
+
             self.objects.run()
 
             pygame.display.update()
